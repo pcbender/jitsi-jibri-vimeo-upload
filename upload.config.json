@@ -1,0 +1,7 @@
+{
+	"client_id" : "",
+	"client_secret" : "",
+	"access_token" : "",
+	"recording_root" : "/srv/recordings",
+	"log_file" : "/tmp/vimeo_upload.log"
+}
