@@ -1,0 +1,54 @@
+{
+    "recording_directory":"/srv/recordings",
+    "finalize_recording_script_path": "/etc/jitsi/jibri/upload.py",
+    "xmpp_environments": [
+        {
+            "name": "jitsi 1",
+            "xmpp_server_hosts": [
+                "yourdomain.com"
+            ],
+            "xmpp_domain": "yourdomain.com",
+            "control_login": {
+                "domain": "auth.yourdomain.com",
+                "username": "jibri",
+                "password": "JibriPassword"
+            },
+            "control_muc": {
+                "domain": "internal.auth.yourdomain.com",
+                "room_name": "JibriBrewery",
+                "nickname": "jibri-recorder-1"
+            },
+            "call_login": {
+                "domain": "recorder.yourdomain.com",
+                "username": "recorder",
+                "password": "RecorderPassword"
+            },
+            "room_jid_domain_string_to_strip_from_start": "conference.",
+            "usage_timeout": "0"
+        },
+	{
+            "name": "jitsi 2",
+            "xmpp_server_hosts": [
+                "yourotherdomain.com"
+            ],
+            "xmpp_domain": "yourotherdomain.com",
+            "control_login": {
+                "domain": "auth.yourotherdomain.com",
+                "username": "jibri",
+                "password": "JibriPassword"
+            },
+            "control_muc": {
+                "domain": "internal.auth.yourotherdomain.com",
+                "room_name": "JibriBrewery",
+                "nickname": "jibri-recorder-1"
+            },
+            "call_login": {
+                "domain": "recorder.yourotherdomain.com",
+                "username": "recorder",
+                "password": "RecorderPassword"
+            },
+            "room_jid_domain_string_to_strip_from_start": "conference.",
+            "usage_timeout": "0"
+        }
+    ]
+}

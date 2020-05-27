@@ -1,0 +1,22 @@
+#!/bin/bash
+
+COMMAND="/usr/bin/ffmpeg"
+
+while test $# -gt 0
+do
+    T="$1"
+    if [ "${T:0:32}" == "rtmp://a.rtmp.youtube.com/live2/" ]; then
+	COMMAND="$COMMAND rtmp://rtmp-global.cloud.vimeo.com/live/${T:32}"
+    else
+	COMMAND="$COMMAND $T"
+    fi
+    shift
+done
+
+echo "Calling ffmpeg with the replaced rtmp url if there is one: «$COMMAND»."
+
+exec $COMMAND 
+PROCESS_FFMPEG=$!
+
+echo "Waiting for completion of the process: ${PROCESS_FFMPEG}."
+wait $PROCESS_FFMPEG
