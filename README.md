@@ -14,7 +14,7 @@ make a backup of /usr/share/jitsi-meet/prosody-plugins/token/util.lib.lua
 download [util.lib.lua](https://raw.githubusercontent.com/pcbender/jitsi-jibri-vimeo-upload/master/util.lib.lua)
 and replace the existing version
 
-restart everything
+restart everything (jifoco, jitsi-meet, prosody)
 
 Generate tokens that look like this:
 
